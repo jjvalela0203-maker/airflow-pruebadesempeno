@@ -6,8 +6,38 @@ Todo el entorno está orquestado mediante contenedores de **Docker** para garant
 
 ---
 
-## 🛠️ Arquitectura y Tecnologías
-
+## Arquitectura y Tecnologías
+```text
+airflow-pruebadesempeno/
+│
+├── api-catalogo/
+│   ├── dockerfile
+│   └── main.py
+│
+├── consultas/
+│   └── querys.sql
+│
+├── dags/
+│   ├── data/
+│   │   ├── data.csv
+│   │   └── online_retail.csv
+│   │
+│   └── etl.py
+│
+├── exploracion/
+│   ├── exploracion.py
+│   └── prueba_api.py
+│
+├── init_dw/
+│   └── 01_init.sql
+│
+├── .dockerignore
+├── .env.example
+├── .gitignore
+├── docker-compose.yaml
+└── README.md
+```
+### Las tecnologias usadas fueron:
 * **Orquestación:** Apache Airflow (optimizado con LocalExecutor).
 * **Procesamiento:** Python (Pandas, Requests, SQLAlchemy).
 * **Data Warehouse:** PostgreSQL 13.
@@ -16,7 +46,7 @@ Todo el entorno está orquestado mediante contenedores de **Docker** para garant
 
 ---
 
-## ⚙️ Instrucciones de Despliegue (Setup)
+## Instrucciones de Despliegue (Setup)
 
 Sigue estos pasos para levantar el proyecto en cualquier entorno local:
 
@@ -43,7 +73,7 @@ Sigue estos pasos para levantar el proyecto en cualquier entorno local:
 
 ---
 
-## 🧠 Decisiones Técnicas y de Negocio
+## Decisiones Técnicas y de Negocio
 
 Para asegurar la calidad, eficiencia y consistencia de los datos, se tomaron las siguientes decisiones de ingeniería durante el desarrollo del pipeline:
 
@@ -81,6 +111,6 @@ Se consumió la API de catálogo utilizando paginación. Los datos extraídos se
 
 ---
 
-## 📊 Consultas de Negocio y Modelo de Datos
+## Consultas de Negocio y Modelo de Datos
 
 * **Consultas SQL:** Las respuestas a las 7 preguntas de negocio solicitadas se encuentran en el archivo `consultas/querys.sql`.
