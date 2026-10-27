@@ -1,0 +1,7 @@
+venv/
+logs/
+.git/
+.gitignore
+__pycache__/
+*.pyc
+*.md
